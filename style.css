@@ -1,0 +1,391 @@
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #eadbd6;
+    color: #514036;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* Header */
+
+header {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 3rem 1.25rem 2.5rem;
+    background:
+        radial-gradient(
+            ellipse at top right,
+            rgba(255, 224, 232, 0.24),
+            transparent 48%
+        ),
+        linear-gradient(
+            135deg,
+            #c29b98,
+            #967168 55%,
+            #75544b
+        );
+    color: #ffffff;
+    border-bottom: 3px solid #e6bcc3;
+}
+
+/* Decorative Header Circles */
+
+header::before,
+header::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(255, 232, 238, 0.25);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+header::before {
+    width: 11.25rem;
+    height: 11.25rem;
+    top: -6.25rem;
+    left: -2.8rem;
+}
+
+header::after {
+    width: 8.75rem;
+    height: 8.75rem;
+    bottom: -5.9rem;
+    right: -1.5rem;
+}
+
+header h1 {
+    position: relative;
+    font-size: 2.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06rem;
+    color: #ffffff;
+    margin-bottom: 0.3rem;
+    text-shadow: 0 2px 12px rgba(54, 35, 23, 0.15);
+}
+
+header p {
+    position: relative;
+    max-width: 40rem;
+    margin: 0 auto;
+    color: #fffaf8;
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+
+.subtitle {
+    position: relative;
+    display: inline-block;
+    margin-top: 1.1rem;
+    padding: 0.3rem 1rem;
+    border: 1px solid rgba(255, 224, 232, 0.7);
+    border-radius: 1.9rem;
+    color: #ffffff;
+    background: rgba(255, 214, 224, 0.16);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12rem;
+}
+
+/* Navigation */
+
+nav {
+    position: relative;
+    background-color: #fbf3f1;
+    padding: 0.75rem 0.6rem;
+    text-align: center;
+    border-bottom: 1px solid #e8c9ce;
+}
+
+nav a {
+    display: inline-block;
+    margin: 0.3rem 0.75rem;
+    color: #7c5754;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #c27885;
+}
+
+/* Main Content */
+
+main {
+    width: 88%;
+    max-width: 65rem;
+    margin: 2.6rem auto;
+}
+
+/* Section Cards */
+
+section {
+    background-color: #fffaf8;
+    padding: 2rem;
+    margin-bottom: 1.6rem;
+    border: 1px solid #ebcfd3;
+    border-radius: 1.1rem;
+    box-shadow: 0 8px 24px rgba(112, 72, 74, 0.07);
+    scroll-margin-top: 1.25rem;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(112, 72, 74, 0.11);
+}
+
+h2 {
+    color: #8f635e;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid #ecd1d5;
+}
+
+h3 {
+    color: #664843;
+    font-size: 1.08rem;
+    font-weight: 600;
+    margin-bottom: 0.65rem;
+    line-height: 1.45;
+}
+
+p {
+    font-size: 0.92rem;
+    margin-bottom: 0.9rem;
+}
+
+section p:last-child {
+    margin-bottom: 0;
+}
+
+/* About Me Section */
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    display: block;
+    width: 100%;
+    max-width: 17rem;
+    height: auto;
+    border: 3px solid #e7c4ca;
+    border-radius: 1rem;
+}
+
+.about-text {
+    flex: 2;
+}
+
+/* Things I Love List */
+
+ul {
+    padding-left: 1.4rem;
+}
+
+li {
+    padding-left: 0.3rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.92rem;
+}
+
+li::marker {
+    color: #cc8b96;
+}
+
+/* Links */
+
+a {
+    color: #996462;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+section a:hover {
+    color: #c27885;
+    text-decoration: underline;
+}
+
+/* Passion Projects Rows */
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background-color: #faf0ee;
+    border: 1px solid #ebd0d4;
+    border-left: 4px solid #d496a0;
+    border-radius: 0.4rem 0.85rem 0.85rem 0.4rem;
+}
+
+.project-card p {
+    margin-bottom: 1rem;
+}
+
+.project-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 0.7rem;
+    border: 2px solid #e7c6cc;
+    background-color: #f0dfe1;
+    margin-bottom: 1.1rem;
+}
+
+.project-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-link {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 0.48rem 1.2rem;
+    background-color: #b57780;
+    color: #ffffff;
+    border: 1px solid #a66670;
+    border-radius: 1.5rem;
+    font-size: 0.84rem;
+    font-weight: 500;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+section a.project-link:hover {
+    background-color: #995c65;
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+/* Footer */
+
+footer {
+    background-color: #cfa9a7;
+    color: #4b3634;
+    text-align: center;
+    padding: 1.6rem 1.25rem;
+    border-top: 2px solid #e6bcc3;
+}
+
+footer p {
+    font-size: 0.82rem;
+    margin: 0;
+}
+
+footer .footer-note {
+    margin-top: 0.3rem;
+    font-size: 0.75rem;
+    font-weight: 300;
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 2.2rem 1.1rem 1.9rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 0.78rem;
+    }
+
+    .subtitle {
+        margin-top: 0.8rem;
+        font-size: 0.65rem;
+    }
+
+    nav {
+        padding: 0.6rem 0.3rem;
+    }
+
+    nav a {
+        margin: 0.3rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    main {
+        width: 92%;
+        margin: 1.8rem auto;
+    }
+
+    section {
+        padding: 1.5rem 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.2rem;
+    }
+
+    .about-image img {
+        max-width: 13rem;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .project-card {
+        padding: 1.15rem;
+    }
+
+    .project-link {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Reduced Motion Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    section,
+    .project-link {
+        transition: none;
+    }
+}
